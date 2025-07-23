@@ -1,35 +1,45 @@
-.App{
-  text-align: center;
+.App {
+    text-align: center;
+    background-color: whitesmoke;
+    min-height: 100vh;
 }
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: hammer;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: hammer;
 }
+
 @font-face {
-  font-family: hammer;
-  src: url(./Assets/HammersmithOne-Regular.ttf);
+    font-family: hammer;
+    src: url(./Assets/HammersmithOne-Regular.ttf);
 }
-.register{
+
+@font-face {
+    font-family: etna;
+    src: url(./Assets/etna-free-font.otf);
+}
+
+.register {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
-.login{
+
+.login {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
-.form{
+
+.form {
     max-width: 100%;
     width: 400px;
     padding: 20px;
@@ -37,17 +47,22 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border: 2px solid black;
+
+    background-color: white;
+
 }
-.form label{
+
+.form label {
     text-align: left;
 }
-.form input{
+
+.form input {
     border-radius: 25px;
     padding: 5px 20px;
     margin: 10px 0px 20px 0px;
 }
-.form button{
+
+.form button {
     cursor: pointer;
     padding: 5px 20px;
     background-color: black;
@@ -55,52 +70,63 @@
     border-radius: 25px;
 
 }
-.form  h5{
+
+.form h5 {
     margin-top: 20px;
     font-size: 12px;
     font-weight: 100;
 }
-.form h5 .link{
-    font-weight: 800;
 
+.form h5 .link {
+    font-weight: 800;
+    background-color: white;
 }
-.form pre{
+
+.form pre {
     color: red;
     font-size: 14px;
 }
-.profile{
-  padding-top: 10%;
+
+.profile {
+    padding-top: 10%;
+
 }
-.profile .div{
+
+.profile .div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
 }
-.profile .link{
+
+.profile .link {
     padding: 10px 25px;
     margin-top: 20px;
-    width:150px;
+    width: 150px;
     border-radius: 10px;
     border: 2px solid black;
     color: white;
     background-color: black;
 
 }
-.profile .link:nth-child(1){
+
+.profile .link:nth-child(1) {
     background-color: white;
     color: red;
-    
+
 }
-.profile .link:hover{
+
+.profile .link:hover {
     background-color: white;
     color: black;
 }
-.profile .link:nth-child(1):hover{
+
+.profile .link:nth-child(1):hover {
     background-color: black;
     color: white;
 }
-.img{
+
+.img {
     margin: 0 auto;
     width: 150px;
     height: auto;

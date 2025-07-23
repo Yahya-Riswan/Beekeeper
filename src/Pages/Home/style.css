@@ -1,37 +1,11 @@
 .home{
-    padding-top: 5%;
-    height: 100vh;
-    background-color: black;
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: whitesmoke;
     color: white;
 }
-.home .img{
-    width: 300px !important;
-    height: auto;
-}
-.home .div{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-}
-.home .link{
-    padding: 10px 25px;
-    margin-top: 20px;
-    width:150px;
-    border-radius: 10px;
-    border: 2px solid white;
-    color: white;
-}
-.home .link:nth-child(1){
-    background-color: white;
+
+.errh3{
     color: black;
-    
-}
-.home .link:hover{
-    background-color: white;
-    color: black;
-}
-.home .link:nth-child(1):hover{
-    background-color: black;
-    color: white;
+    font-family: hammer;
 }

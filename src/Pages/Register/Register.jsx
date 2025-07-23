@@ -17,7 +17,7 @@ function Register() {
 
         }else{
             try{
-                let res = await axios.get("https://beekeeper-blogs.vercel.app/api/json/users/"+email)
+                let res = await axios.get("http://localhost:5000/users/"+email)
                 console.log(res.data.id)
                 if(res.data.id === email){
                     localStorage.setItem("email",email);
@@ -26,7 +26,7 @@ function Register() {
                 }
             }catch(e){
                 console.log(e)
-                let res = await axios.post("https://beekeeper-blogs.vercel.app/api/json/users",{id:email,pass:pass,name:name})
+                let res = await axios.post("http://localhost:5000/users",{id:email,pass:pass,name:name})
                 localStorage.setItem("email",email);
                 localStorage.setItem("pass",pass);
                 localStorage.setItem("name",name);

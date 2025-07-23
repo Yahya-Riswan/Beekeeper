@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import UserContext from '../../Context/userContext'
 import { useNavigate } from "react-router"
 import axios from "axios"
 import "../../App.css"
@@ -6,7 +7,7 @@ import logo_bg from "../../Assets/logo_bg.png"
 
 function Profile() {
     let navigate = useNavigate();
-    
+    const {setUser} = useContext(UserContext);
     const [name,setName] = useState("")
 
     useEffect(()=>{
@@ -18,18 +19,21 @@ function Profile() {
         },[])
     const logout = () =>{
         localStorage.clear()
+        setUser({})
         navigate("/");
     }
     const deleteAccount = async ()=>{
         try{
             let id = localStorage.getItem("email")
-            let res = await axios.delete("https://beekeeper-blogs.vercel.app/api/json/users/"+id)
+            let res = await axios.delete("http://localhost:5000/users/"+id)
             console.log(res)
             localStorage.clear()
+            setUser("")
             navigate("/");
         }catch(e){
             console.log(e)
             localStorage.clear()
+            setUser("")
             navigate("/");
         }
     }

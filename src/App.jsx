@@ -10,6 +10,8 @@ import Error from "./Pages/Error/Error";
 import IdBlog from "./Pages/IdBlog/IdBlog";
 import UserContext from "./Context/userContext";
 import CreateBlog from "./Pages/CreateBlog/CreateBlog";
+import MyBlog from "./Pages/MyBlog/MyBlog";
+import UpdateBlog from "./Pages/UpdateBlog/UpdateBlog";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -24,6 +26,8 @@ function App() {
           <Route path="/Profile" element={<Profile/>} />
           <Route path="/Blog/:blogid" element={<IdBlog />} />
           <Route path="/CreateBlog" element={<CreateBlog />} />
+          <Route path="/UpdateBlog" element={<UpdateBlog />} />
+          <Route path="/MyBlog" element={<MyBlog />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </UserContext.Provider>

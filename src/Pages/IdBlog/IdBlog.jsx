@@ -3,8 +3,11 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "./style.css"
+import {useNavigate} from "react-router"
+
 function IdBlog() {
   const { blogid } = useParams();
+  let navigate = useNavigate()
   const [blogdata, setBlogData] = useState(null)
   useEffect(()=>{
       if(!blogdata){
@@ -14,12 +17,16 @@ function IdBlog() {
             setBlogData(res1.data)
           }catch(e){
             console.log(e)
+            navigate("/404")
           }
         }
         fetchBlogData()
       }
 
   },[blogid,blogdata])
+  const back = ()=>{
+    navigate(-1)
+  }
   return (
     <div className='idblog'>
       {blogdata && 
@@ -34,7 +41,7 @@ function IdBlog() {
               <h5>{blogdata.timestamp}</h5>
             </div>
             <div className="right">
-                <Link to={"/"} className='link'>Back</Link>
+                <button className='link' onClick={back}>Back</button>
             </div>
           </div>
         </div>

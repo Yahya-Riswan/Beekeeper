@@ -27,6 +27,7 @@ function Header() {
         </Link>
         <div className="div">
             <Link to={"/CreateBlog"} className='create'>Create Blog</Link>
+            <Link to={"/MyBlog"} className='create'>My Blog</Link>
         </div>
         {!login &&
           <div className="right div">
